@@ -5,7 +5,7 @@ pipeline {
             steps {
                 sh '''
             IFS=$'\n' 
-            for i in $(cat ./release.yml)
+            for i in $(cat release.yml)
             do 
             echo "$i" 
             done
