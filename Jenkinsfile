@@ -7,7 +7,7 @@ pipeline {
             IFS=$'\n' 
             for i in $(cat release.yml)
             do 
-            echo "$i" 
+            echo "La versión de $(echo "$i" | cut -d ":" -f1) es $(echo "$i" | cut -d ":" -f2)"
             done
                 '''
                 }
