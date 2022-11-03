@@ -7,7 +7,7 @@ pipeline {
                 lineas_fichero=$release.yml
                 for i in $lineas_fichero;
                 do
-                echo $i
+                echo "$i"
                 echo "$lineas_fichero"
                 done
                 '''
