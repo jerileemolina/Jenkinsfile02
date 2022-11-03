@@ -5,8 +5,9 @@ pipeline {
             steps {
                 sh '''
                 lineas_fichero=$(cat release.yml)
-                for i in $lineas_fichero; do
-                echo "El nombre es y la versión $i"
+                for i in $lineas_fichero;
+                do
+                echo "$lineas_fichero"
                 done
                 '''
                 }
