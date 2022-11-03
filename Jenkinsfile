@@ -4,9 +4,10 @@ pipeline {
         stage ('Ejercicio2') {
             steps {
                 sh '''
-                    for file in *'release.yml'; do
-                    echo $file; 
-                    done
+                lineas_fichero=$(cat release.yml)
+                for i in $lineas_fichero; do
+                echo "El nombre es y la versión $i"
+                done
                 '''
                 }
             }
