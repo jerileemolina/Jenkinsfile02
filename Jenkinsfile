@@ -4,7 +4,7 @@ pipeline {
         stage ('Ejercicio2') {
             steps {
                 sh '''
-                lineas_fichero=$(cat release.yml)
+                lineas_fichero=$(release.yml)
                 for i in $lineas_fichero;
                 do
                 echo $i
