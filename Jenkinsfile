@@ -4,9 +4,9 @@ pipeline {
         stage ('Ejercicio2') {
             steps {
                 sh '''
-                for i in $(cut -d ':' -f1,2 release.yml);
+                for i in `release.yml`;
                 do
-                echo "$(cut -d ':' -f1,2 release.yml)"
+                echo "$i"
                 done
                 '''
                 }
