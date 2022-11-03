@@ -4,7 +4,9 @@ pipeline {
         stage ('Ejercicio2') {
             steps {
                 sh '''
-                    for file in *; do echo $file; done
+                    for file in *'release.yml'; do
+                    echo $file; 
+                    done
                 '''
                 }
             }
