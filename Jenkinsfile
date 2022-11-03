@@ -4,11 +4,9 @@ pipeline {
         stage ('Ejercicio2') {
             steps {
                 sh '''
-                lineas_fichero=$(`cut -d ':' -f1,2 release.yml`)
-                for i in $lineas_fichero;
+                for i in $(cut -d ':' -f1,2 release.yml);
                 do
-                echo "$i"
-                echo "$lineas_fichero"
+                echo "$(cut -d ':' -f1,2 release.yml)"
                 done
                 '''
                 }
